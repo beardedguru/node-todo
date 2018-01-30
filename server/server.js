@@ -39,9 +39,8 @@ app.get('/todos', (req, res) => {
 // GET /todos/1234324
 app.get('/todos/:id', (req, res) => {
   var id = req.params.id;
-
+  // is id valid
   if (!ObjectID.isValid(id)) {
-    // is id valid
     // verify that the id is valid
     res.status(404).send(); //   respond with 404 - send back empty body
   }
