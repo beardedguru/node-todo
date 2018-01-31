@@ -16,6 +16,10 @@ var Todo = mongoose.model('Todo', {
     type: Number, // declare type to number
     default: null, // set default to null
   },
+  _creator: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+  },
 });
 
 module.exports = { Todo };
